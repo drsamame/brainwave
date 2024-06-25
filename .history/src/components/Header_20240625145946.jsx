@@ -13,15 +13,11 @@ function Header() {
   const toggleNavigation = () => {
     if (openNavigation) {
       setOpenNavigation(false)
-      enablePageScroll()
     } else {
       setOpenNavigation(true)
-      disablePageScroll()
     }
   }
   const handleClick = () => {
-    if (!openNavigation) return
-    enablePageScroll()
     setOpenNavigation(false)
   }
   return (
@@ -34,7 +30,8 @@ function Header() {
           <img src={brainwave} width={190} height={40} alt='brainwave' />
         </a>
         <nav
-          className={`${openNavigation ? 'flex' : 'hidden'}  fixed top-[5rem] left-0 right-0 bottom-0 bg-n-8 lg:static lg:flex lg:mx-auto lg:bg-transparent`}
+          className={`${openNavigation ? 'flex' : 'hidden'} overflow-hidden fixed top-[5rem] left-0 right-0 bottom-0 
+          bg-n-8 lg:static lg-flex lg:mx-auto lg:bg-transparent`}
         >
           <div className='relative flex z-2 items-center flex-col m-auto lg:flex-row'>
             {navigation.map((item) => (
