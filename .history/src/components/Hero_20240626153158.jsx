@@ -20,6 +20,7 @@ function Hero() {
       crossesOffset='lg:translate-y-[5.25rem]'
       customPaddings
       id='hero'
+      ref={parallaxRef}
     >
       <div className='container relative' ref={parallaxRef}>
         <div

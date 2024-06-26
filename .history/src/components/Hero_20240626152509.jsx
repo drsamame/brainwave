@@ -8,7 +8,6 @@ import { heroIcons } from '../constants'
 import { ScrollParallax } from 'react-just-parallax'
 import Generating from './Generating'
 import Notification from './Notification'
-import CompanyLogos from './CompanyLogos'
 
 function Hero() {
   const parallaxRef = useRef(null)
@@ -20,6 +19,7 @@ function Hero() {
       crossesOffset='lg:translate-y-[5.25rem]'
       customPaddings
       id='hero'
+      ref={parallaxRef}
     >
       <div className='container relative' ref={parallaxRef}>
         <div
@@ -93,7 +93,7 @@ function Hero() {
           </div>
           <BackgroundCircles />
         </div>
-        <CompanyLogos className='hidden relative z-10 mt-20 lg:block' />
+        <CompantLogos />
       </div>
       <BottomLine />
     </Section>

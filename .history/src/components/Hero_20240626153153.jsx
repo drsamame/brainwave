@@ -20,6 +20,7 @@ function Hero() {
       crossesOffset='lg:translate-y-[5.25rem]'
       customPaddings
       id='hero'
+      ref={parallaxRef}
     >
       <div className='container relative' ref={parallaxRef}>
         <div
@@ -93,7 +94,6 @@ function Hero() {
           </div>
           <BackgroundCircles />
         </div>
-        <CompanyLogos className='hidden relative z-10 mt-20 lg:block' />
       </div>
       <BottomLine />
     </Section>
